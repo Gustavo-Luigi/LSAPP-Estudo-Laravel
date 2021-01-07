@@ -5,7 +5,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
   
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
@@ -19,6 +19,10 @@
           <li class="nav-item">
             <a class="nav-link" href="/posts">Blog</a>
           </li>
+        </ul>
+
+        <ul class="nav ml-auto">
+          <li><a href="/posts/create">Create Post</a></li>
         </ul>
       </div>
     </div>
