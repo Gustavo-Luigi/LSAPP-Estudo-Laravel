@@ -45,6 +45,7 @@ class PostsController extends Controller
 
         $post->title = $request->title;
         $post->body = $request->body;
+        $post->user_id = auth()->user()->id;
 
         $post->save();
 
