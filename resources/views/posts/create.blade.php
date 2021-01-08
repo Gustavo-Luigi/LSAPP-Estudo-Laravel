@@ -4,7 +4,6 @@
     <h1>Create post</h1>
     <form action="/posts" method="POST">
         @csrf
-        {{-- @method('POST') --}}
         <div class=="form-group">
             <label for="title">Title</label>
             <input type="text" name="title" class="form-control" placeholder="Title">
