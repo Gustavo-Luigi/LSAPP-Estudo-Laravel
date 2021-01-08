@@ -8,12 +8,16 @@
     </div>
     <hr>
     <small>> Written on {{$post->created_at}}</small>
-    <div class="d-flex justify-content-between">
-        <a href="/posts/{{$post->id}}/edit" class="btn btn-secondary">Edit</a>
-        <form action="/posts/{{$post->id}}" method="POST">
-            @csrf
-            @method('DELETE')
-            <input type="submit" value="Delete" class="btn btn-danger">
-        </form>
-    </div>
+    @if(!Auth::guest())
+        @if(Auth::user()->id == $post->user_id)
+            <div class="d-flex justify-content-between">
+                <a href="/posts/{{$post->id}}/edit" class="btn btn-secondary">Edit</a>
+                <form action="/posts/{{$post->id}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="Delete" class="btn btn-danger">
+                </form>
+            </div>
+        @endif
+    @endif
 @endsection
